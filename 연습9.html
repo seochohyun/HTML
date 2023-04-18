@@ -1,0 +1,44 @@
+<style>
+    /* 자식 li */
+    body > ul > li {
+        background-color: khaki;
+    }
+    li > div {
+        border: 3px solid coral;
+    }
+    /* 하위에 있는 li */
+    li li {
+        font-style: italic;
+        text-decoration: line-through;
+        list-style: none;
+    }
+    body > div{
+        font-size: 2rem;
+    }
+    body > ul {
+        width: 250px;
+    }
+
+
+</style>
+
+<body>
+    <div>하위 / 자식 선택자</div>
+    <ul>
+        <li>
+            <div>Item 1</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+        <li>
+            <div>Item 2</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
