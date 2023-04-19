@@ -1,0 +1,26 @@
+<!-- layout ppt 13 page -->
+<style>
+    body {
+        background-color: skyblue;
+    }
+
+    @media only screen and (max-width: 600px) {
+        body {
+            background-color: yellow;
+        }
+    }
+    @media (min-width:601px) and (max-width:800px) {
+        body{
+            background-color: red;
+        }
+    }
+    @media print {
+        p { font-size: 4em; }
+    }
+</style>
+
+<body>
+    <p>
+        브라우저의 너비가 600 픽셀 이하에서는 배경 색상이 노란색으로 변경된다.
+    </p>
+</body>

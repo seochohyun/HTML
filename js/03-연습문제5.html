@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <button onclick="game(0)">가위</button>
+  <button onclick="game(1)">바위</button>
+  <button onclick="game(2)">보</button>
+
+  <div id="result"></div>
+
+  <script>
+    const result2 = document.querySelector('#result')
+
+    function game(player) {
+      const map = ['가위', '바위', '보'];
+      const com = parseInt(Math.random() * 3);
+      result2.innerHTML = (`player: ${map[player]}, com: ${map[com]}`);
+      let result = '';
+      if ((player + 1) % 3 == com) {
+        result = '패'
+      }
+      else if (player == com) {
+        result = '무승부'
+      }
+      else {
+        result = '승'
+      }
+
+      result2.innerHTML += `<br>결과: ${result}`;
+
+    }
+
+    // const map = ['가위', '바위', '보'];
+    // // const player = 0;
+    // const com = parseInt(Math.random() * 3);
+    // console.log(`player: ${map[player]}, com: ${map[com]}`);
+
+    // let result = '';
+
+    /* 코드 */
+
+    // if ((p == 0 && c == 1) || (p ==1 && c == 2))
+    // else if (p == c)
+    // else
+
+    // if ((player + 1) % 3 == com) {
+    //   result = 'com 승리'
+    // }
+    // else if (player == com) {
+    //   result = '비겼음'
+    // }
+    // else {
+    //   result = 'player 승리'
+    // }
+
+    // console.log(`결과: ${result}`);
+
+
+
+  </script>
+</body>
+
+</html>
