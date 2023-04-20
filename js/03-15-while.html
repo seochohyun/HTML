@@ -2,10 +2,14 @@
 <html>
 
 <body>
+  <div id="result"></div>
   <script>
     let i = 3;
     while (i > 0) {
+      result = document.querySelector('#result')
+      result.innerHTML += i
       console.log(`while: ${i}`);
+      // document.write(i)
       i--;
     }
     do {
