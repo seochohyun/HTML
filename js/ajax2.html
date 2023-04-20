@@ -5,13 +5,20 @@
             return response.json();
         }).then(function (result) {
             items = result['items']
+            code = ''
             for(let i = 0; i < items.length; i++) {
                 item = items[i]
                 videoId = item['id']['videoId']
                 title = item['snippet']['title']
                 url = item['snippet']['thumbnails']['default']['url']
-                console.log(title);
+                code += `
+                <a href='${url}'>${title}</a>
+            <br>
+          `
+                // console.log(title);
             }
+            body = document.querySelector('body')
+            body.innerHTML += code;
         });
     </script>
 </body>
