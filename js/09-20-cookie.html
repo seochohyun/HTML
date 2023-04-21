@@ -9,6 +9,9 @@
     let cookies = 'key3=value3;';
     const expires = new Date();
     expires.setDate(expires.getDate() + 1); // 1일이 지난 후 쿠키 삭제
+
+    console.log(expires.toGMTString())
+
     cookies += "expires=" + expires.toGMTString() + ";";
     document.cookie = cookies;
   </script>

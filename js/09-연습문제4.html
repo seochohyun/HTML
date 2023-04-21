@@ -14,16 +14,25 @@
   input.addEventListener('focus', (event) => {
     let search = event.currentTarget.value;
 
-    
+    if(search.length == 0) {
+      event.currentTarget.value = '#'
+    }    
   });
 
   input.addEventListener('keyup', (event) => {
     // space 입력 시 keyCode 32
     let keyCode = event.keyCode;
-    
 
-
+    if(keyCode == 32) {
+      let search = event.currentTarget.value
+      search = search.substring(0, search.length-1)
+      event.currentTarget.value = search + ', #'
+      
+    }
   });
+
+
+
 
 </script>
 

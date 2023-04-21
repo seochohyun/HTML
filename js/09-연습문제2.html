@@ -21,9 +21,20 @@
   </div>
 
   <script>
-    document.querySelector('button').addEventListener('click', () => {
 
+    document.querySelector('button').addEventListener('click', () => {  
+      const target = document.querySelector('.target')
+      // 1) HTML 코드로 요소 생성하기(innerHTML은 문자여야 함)
+      // let code = '<img src="http://ggoreb.com/images/choco/1.jpg">'
+      // target.innerHTML = code
+      
+
+      // 2) 자바스크립트 코드로 요소 생성
+      const img = document.createElement('img')
+      img.src = "http://ggoreb.com/images/choco/1.jpg"
+      target.append(img)
     });
+
   </script>
 </body>
 

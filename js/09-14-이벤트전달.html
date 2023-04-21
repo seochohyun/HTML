@@ -23,10 +23,11 @@
     <div style='background-color: blue; border-radius: 25px;'></div>
   </div>
   <script>
-    document.querySelector('div > div:first-child').addEventListener('click', (event) => {
+    document.querySelector('div > div:first-child').addEventListener('click', (event) => { event.stopPropagation()
       console.log('red div');
     });
     document.querySelector('div > div:last-child').addEventListener('click', (event) => {
+      event.stopPropagation()
       console.log('blue div');
     });
     document.querySelector('body > div').addEventListener('click', (event) => {

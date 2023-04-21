@@ -7,33 +7,25 @@
 </head>
 
 <body>
+  <div>
+    내용
+    <span>단어</span>
+  </div>
   <script>
-    console.log(document.head);
-    console.log(document.title);
-    console.log(document.body);
-    console.log(document.head.childNodes[1]);
-    console.log(document.head.childNodes[3]);
-    console.log(document.body.childNodes[1])
-  </script>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-
-<body>
-  <script>
-    console.log(document.head);
-    console.log(document.title);
-    console.log(document.body);
-    console.log(document.head.childNodes[1]);
-    console.log(document.head.childNodes[3]);
-    console.log(document.body.childNodes[1])
+    body = document.querySelector('body')
+    div = document.querySelector('div')
+    console.log(div);
+    console.dir(div);
+    console.log(div.innerHTML);
+    console.log(div.textContent);
+    div.innerHTML = '<u>변경!!</u>';
+    div.textContent = '<u>변경!!</u>';
+    // console.log(document.head);
+    // console.log(document.title);
+    // console.log(document.body);
+    // console.log(document.head.childNodes[1]);
+    // console.log(document.head.childNodes[3]);
+    // console.log(document.body.childNodes[1])
   </script>
 </body>
 

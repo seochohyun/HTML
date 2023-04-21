@@ -11,10 +11,24 @@
 </body>
 
 <script>
+
   /* 마우스 드래그 방지 이벤트*/
+
   document.body.onselectstart = () => false;
 
+
   let count = 0;
+
+
+  const h1 = document.querySelector('h1')
+  const span = document.querySelector('span')
+  h1.addEventListener('click', () => {
+    count += 1
+    span.innerHTML = count
+  })
+
+
+
 
 </script>
 
